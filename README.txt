@@ -2,7 +2,6 @@
 Sud Air Equipement
 Projet du stage 2013
 ***************************************************
-ptit coucou
 
 Entreprise :
 Nom : Sud Air Equipement 
