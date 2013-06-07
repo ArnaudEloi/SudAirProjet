@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "QSqlDatabase"
 #include "QSqlTableModel"
+#include "QSqlQueryModel"
 
 namespace Ui {
     class MainWindow;
@@ -28,6 +29,7 @@ private:
 
 private slots:
 
+    void on_pushButtonAjoutProduit_clicked();
     void on_pushButtonSupprimerProduit_clicked();
     void on_checkBoxSupprimerProduit_clicked();
     void on_lineEditRecherche_textEdited(QString );

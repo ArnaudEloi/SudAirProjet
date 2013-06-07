@@ -5,6 +5,8 @@
 #include "QSqlTableModel"
 #include "QSqlQuery"
 #include "QDebug"
+#include "QSqlRecord"
+#include "QSqlQueryModel"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -149,6 +151,43 @@ void MainWindow::affichageResume()
 // fin fonctions d'affichage des informtions
 /////////////////////////////////////////////
 
+// ajout
+///////////
+
+// NOUVEAU PRODUIT
+void MainWindow::on_pushButtonAjoutProduit_clicked()
+{
+    if(ui->lineEditNouveauProduit->text()!="")
+    {
+    QString newLib=ui->lineEditNouveauProduit->text();
+    QSqlQuery maRequete("select max(id_product)+1 from sae_product_lang");
+    maRequete.next();
+    int numeroOk=maRequete.value(0).toInt();
+
+    QSqlQuery query;
+      query.prepare("INSERT INTO sae_product_lang (id_product, name, id_lang, link_rewrite) "
+                    "VALUES (?, ?, ?, ?)");
+      query.addBindValue(numeroOk);
+      query.addBindValue(newLib);
+      query.addBindValue(1);
+      QString lien="link"+QString::number(numeroOk);
+      query.addBindValue(lien);
+
+      query.exec();
+
+    // actualiser
+    actualiserAffichageProduit();
+    }
+    else
+    {
+        qDebug()<<"vide";
+    }
+    ui->lineEditNouveauProduit->setText("");
+}
+
+// fin ajout
+//////////////
+
 
 // suppression
 //////////////////
@@ -157,6 +196,37 @@ void MainWindow::affichageResume()
 void MainWindow::on_pushButtonSupprimerProduit_clicked()
 {
     decocherSuppressionProduit();
+
+    // récupération de l'id du produit
+    QString labProd=ui->listViewProduit->currentIndex().data(Qt::DisplayRole).toString();
+    QSqlQuery query("select id_product from sae_product_lang where name='"+labProd+"'");
+    query.next();
+    QString idProd = query.value(0).toString();
+
+    //requete suppression
+    QSqlQuery query2;
+    QString req2="delete from sae_product_lang where id_product ="+idProd+"";
+    query2.prepare(req2);
+    query2.exec();
+    QSqlQuery query3;
+    QString req3="delete from sae_product where id_product ="+idProd+"";
+    query3.prepare(req3);
+    query3.exec();
+    QSqlQuery query4;
+    QString req4="delete from sae_product_attribute where id_product ="+idProd+"";
+    query4.prepare(req4);
+    query4.exec();
+    QSqlQuery query5;
+    QString req5="delete from sae_product_shop where id_product ="+idProd+"";
+    query5.prepare(req5);
+    query5.exec();
+    QSqlQuery query6;
+    QString req6="delete from sae_product_supplier where id_product ="+idProd+"";
+    query6.prepare(req6);
+    query6.exec();
+
+    //actaliser
+    actualiserAffichageProduit();
 }
 
 // déchocher
