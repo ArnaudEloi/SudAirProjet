@@ -26,8 +26,11 @@ MainWindow::MainWindow(QWidget *parent) :
     if(baseCommerciale.open())
     {
         ui->statusBar->setStatusTip("Connexion à la base réussie");
+        /// premiers affichage des données
         // recherche de tous les produits
         on_lineEditRecherche_textEdited("");
+        // recherche de toutes les catégories
+        on_lineEditRechercheCategorie_textEdited("");
     }
     else
     {
@@ -62,6 +65,8 @@ void MainWindow::on_actionQuitter_triggered()
     this->close();
 }
 
+/// PRODUIT ////////////
+
 // ACTUALISER AFFICHAGE PRODUIT
 void MainWindow::actualiserAffichageProduit()
 // affiche les informations sur le produit choisi
@@ -72,9 +77,12 @@ void MainWindow::actualiserAffichageProduit()
     affichagePrix();
     // description
     affichageDescription();
-
+    // résumé
+    affichageResume();
+    // décocher la suppression
+    decocherSuppressionProduit();
 }
-
+// CHOIX DU PRODUIT
 void MainWindow::on_listViewProduit_clicked(QModelIndex index)
 {
     actualiserAffichageProduit();
@@ -127,5 +135,113 @@ void MainWindow::affichageNom()
     ui->lineEditNom->setText(labProd);
 }
 
+void MainWindow::affichageResume()
+{
+    QString labProd=ui->listViewProduit->currentIndex().data(Qt::DisplayRole).toString();
+
+    QSqlQuery query("select description_short from sae_product_lang where name='"+labProd+"'");
+    query.next();
+    QString resultat = query.value(0).toString();
+
+    ui->textEditResum->setText(resultat);
+}
+
 // fin fonctions d'affichage des informtions
 /////////////////////////////////////////////
+
+
+// suppression
+//////////////////
+
+// supprimer le produit
+void MainWindow::on_pushButtonSupprimerProduit_clicked()
+{
+    decocherSuppressionProduit();
+}
+
+// déchocher
+void MainWindow::decocherSuppressionProduit()
+{
+    ui->pushButtonSupprimerProduit->setDisabled(true);
+    ui->checkBoxSupprimerProduit->setChecked(false);
+}
+
+// confirmation de suppression
+void MainWindow::on_checkBoxSupprimerProduit_clicked()
+{
+    if (ui->checkBoxSupprimerProduit->isChecked())
+    {
+        ui->pushButtonSupprimerProduit->setDisabled(false);
+    }
+    else
+    {
+        ui->pushButtonSupprimerProduit->setDisabled(true);
+    }
+}
+
+// fin suppression
+/////////////////////
+
+/// fin produit //////////
+
+
+/// CATEGORIE //////////
+
+// ACTUALISER AFFICHAGE CATEGORIE
+void MainWindow::actualiserAffichageCategorie()
+// affiche les informations sur la catégorie choisi
+{
+    // nom
+    affichageNomCategorie();
+    // description
+    affichageDescriptionCategorie();
+}
+
+// CHOIX DE LA CATEGORIE
+void MainWindow::on_listViewCategorie_clicked(QModelIndex index)
+{
+    actualiserAffichageCategorie();
+}
+
+// RECHERCHE DE CATEGORIE
+void MainWindow::on_lineEditRechercheCategorie_textEdited(QString )
+{
+    modelLibCategories=new QSqlQueryModel(this);
+    QString recherche=ui->lineEditRechercheCategorie->text();
+    QString search="select name from sae_category_lang where name like '%"+recherche+"%' and name !='root' and name !='Accueil' order by name asc";
+    modelLibCategories->setQuery(search);
+    ui->listViewCategorie->setModel(modelLibCategories);
+}
+
+
+// FONCTIONS D'AFFICHAGE DES INFORMATIONS
+///////////////////////////////////////////
+
+void MainWindow::affichageDescriptionCategorie()
+{
+    QString labProd=ui->listViewCategorie->currentIndex().data(Qt::DisplayRole).toString();
+
+    QSqlQuery query("select description from sae_category_lang where name='"+labProd+"'");
+    query.next();
+    QString resultat = query.value(0).toString();
+
+    ui->textEditDescCategorie->setText(resultat);
+}
+
+void MainWindow::affichageNomCategorie()
+{
+    QString labProd=ui->listViewCategorie->currentIndex().data(Qt::DisplayRole).toString();
+    ui->lineEditNomCategorie->setText(labProd);
+}
+
+// fin fonctions d'affichage des informtions
+/////////////////////////////////////////////
+/// fin catégorie //////////
+
+
+
+
+
+
+
+
