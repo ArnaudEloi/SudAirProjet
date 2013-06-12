@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Fri Jun 7 15:41:33 2013
+** Created: Wed Jun 12 11:16:32 2013
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        4,       // revision
        0,       // classname
        0,    0, // classinfo
-      17,   14, // methods
+      30,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,28 +32,43 @@ static const uint qt_meta_data_MainWindow[] = {
 
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x08,
-      48,   11,   11,   11, 0x08,
-      88,   11,   11,   11, 0x08,
-     126,   11,   11,   11, 0x08,
-     173,  167,   11,   11, 0x08,
-     213,   11,   11,   11, 0x08,
-     242,   11,   11,   11, 0x08,
-     271,   11,   11,   11, 0x08,
-     287,   11,   11,   11, 0x08,
-     310,   11,   11,   11, 0x08,
-     328,   11,   11,   11, 0x08,
-     343,   11,   11,   11, 0x08,
-     372,   11,   11,   11, 0x08,
-     422,  167,   11,   11, 0x08,
-     464,   11,   11,   11, 0x08,
-     495,   11,   11,   11, 0x08,
-     527,   11,   11,   11, 0x08,
+      45,   11,   11,   11, 0x08,
+      78,   11,   11,   11, 0x08,
+     114,   11,   11,   11, 0x08,
+     154,   11,   11,   11, 0x08,
+     192,   11,   11,   11, 0x08,
+     239,  233,   11,   11, 0x08,
+     279,   11,   11,   11, 0x08,
+     308,   11,   11,   11, 0x08,
+     337,   11,   11,   11, 0x08,
+     353,   11,   11,   11, 0x08,
+     376,   11,   11,   11, 0x08,
+     394,   11,   11,   11, 0x08,
+     409,   11,   11,   11, 0x08,
+     438,   11,   11,   11, 0x08,
+     453,   11,   11,   11, 0x08,
+     470,   11,   11,   11, 0x08,
+     490,   11,   11,   11, 0x08,
+     509,   11,   11,   11, 0x08,
+     532,   11,   11,   11, 0x08,
+     572,   11,   11,   11, 0x08,
+     613,   11,   11,   11, 0x08,
+     663,  233,   11,   11, 0x08,
+     705,   11,   11,   11, 0x08,
+     736,   11,   11,   11, 0x08,
+     768,   11,   11,   11, 0x08,
+     792,   11,   11,   11, 0x08,
+     812,   11,   11,   11, 0x08,
+     834,   11,   11,   11, 0x08,
+     865,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindow[] = {
-    "MainWindow\0\0on_pushButtonAjoutProduit_clicked()\0"
+    "MainWindow\0\0on_pushButtonModifDesc_clicked()\0"
+    "on_pushButtonModifInfo_clicked()\0"
+    "on_pushButtonAjoutProduit_clicked()\0"
     "on_pushButtonSupprimerProduit_clicked()\0"
     "on_checkBoxSupprimerProduit_clicked()\0"
     "on_lineEditRecherche_textEdited(QString)\0"
@@ -63,11 +78,19 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "affichagePrix()\0affichageDescription()\0"
     "affichageResume()\0affichageNom()\0"
     "decocherSuppressionProduit()\0"
+    "affichageRef()\0nouveauProduit()\0"
+    "actualiserProduit()\0afficheCategorie()\0"
+    "selectionAutoProduit()\0"
+    "on_checkBoxSupprimerCategorie_clicked()\0"
+    "on_pushButtonNouvelleCategorie_clicked()\0"
     "on_lineEditRechercheCategorie_textEdited(QString)\0"
     "on_listViewCategorie_clicked(QModelIndex)\0"
     "actualiserAffichageCategorie()\0"
     "affichageDescriptionCategorie()\0"
-    "affichageNomCategorie()\0"
+    "affichageNomCategorie()\0nouvelleCategorie()\0"
+    "actualiserCategorie()\0"
+    "decocherSuppressionCategorie()\0"
+    "on_pushButtonSupprimerCategorie_clicked()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -99,26 +122,39 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: on_pushButtonAjoutProduit_clicked(); break;
-        case 1: on_pushButtonSupprimerProduit_clicked(); break;
-        case 2: on_checkBoxSupprimerProduit_clicked(); break;
-        case 3: on_lineEditRecherche_textEdited((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 4: on_listViewProduit_clicked((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
-        case 5: on_actionQuitter_triggered(); break;
-        case 6: actualiserAffichageProduit(); break;
-        case 7: affichagePrix(); break;
-        case 8: affichageDescription(); break;
-        case 9: affichageResume(); break;
-        case 10: affichageNom(); break;
-        case 11: decocherSuppressionProduit(); break;
-        case 12: on_lineEditRechercheCategorie_textEdited((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 13: on_listViewCategorie_clicked((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
-        case 14: actualiserAffichageCategorie(); break;
-        case 15: affichageDescriptionCategorie(); break;
-        case 16: affichageNomCategorie(); break;
+        case 0: on_pushButtonModifDesc_clicked(); break;
+        case 1: on_pushButtonModifInfo_clicked(); break;
+        case 2: on_pushButtonAjoutProduit_clicked(); break;
+        case 3: on_pushButtonSupprimerProduit_clicked(); break;
+        case 4: on_checkBoxSupprimerProduit_clicked(); break;
+        case 5: on_lineEditRecherche_textEdited((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 6: on_listViewProduit_clicked((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
+        case 7: on_actionQuitter_triggered(); break;
+        case 8: actualiserAffichageProduit(); break;
+        case 9: affichagePrix(); break;
+        case 10: affichageDescription(); break;
+        case 11: affichageResume(); break;
+        case 12: affichageNom(); break;
+        case 13: decocherSuppressionProduit(); break;
+        case 14: affichageRef(); break;
+        case 15: nouveauProduit(); break;
+        case 16: actualiserProduit(); break;
+        case 17: afficheCategorie(); break;
+        case 18: selectionAutoProduit(); break;
+        case 19: on_checkBoxSupprimerCategorie_clicked(); break;
+        case 20: on_pushButtonNouvelleCategorie_clicked(); break;
+        case 21: on_lineEditRechercheCategorie_textEdited((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 22: on_listViewCategorie_clicked((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
+        case 23: actualiserAffichageCategorie(); break;
+        case 24: affichageDescriptionCategorie(); break;
+        case 25: affichageNomCategorie(); break;
+        case 26: nouvelleCategorie(); break;
+        case 27: actualiserCategorie(); break;
+        case 28: decocherSuppressionCategorie(); break;
+        case 29: on_pushButtonSupprimerCategorie_clicked(); break;
         default: ;
         }
-        _id -= 17;
+        _id -= 30;
     }
     return _id;
 }

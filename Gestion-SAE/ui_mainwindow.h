@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Fri Jun 7 12:05:54 2013
+** Created: Tue Jun 11 17:40:09 2013
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -16,6 +16,7 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QCheckBox>
 #include <QtGui/QComboBox>
+#include <QtGui/QDial>
 #include <QtGui/QGridLayout>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
@@ -28,9 +29,11 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
+#include <QtGui/QStackedWidget>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTextEdit>
+#include <QtGui/QToolButton>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -45,7 +48,34 @@ public:
     QTabWidget *tabWidgetFonctionnalites;
     QWidget *tab_3;
     QGridLayout *gridLayout_12;
+    QStackedWidget *stackedWidget_9;
+    QWidget *stackedWidget_9Page1;
+    QGridLayout *gridLayout_17;
+    QGroupBox *groupBox_8;
+    QGridLayout *gridLayout_2;
+    QTextEdit *textEditResum;
+    QGroupBox *groupBox_2;
+    QGridLayout *gridLayout_9;
+    QTextEdit *textEditDesc;
     QGroupBox *groupBox_10;
+    QGridLayout *gridLayout_18;
+    QDial *dial;
+    QGroupBox *groupBox_9;
+    QGridLayout *gridLayout_8;
+    QHBoxLayout *horizontalLayout_15;
+    QSpacerItem *horizontalSpacer_12;
+    QLabel *label_14;
+    QSpacerItem *horizontalSpacer_13;
+    QHBoxLayout *horizontalLayout_14;
+    QLabel *label_13;
+    QToolButton *toolButton;
+    QSpacerItem *horizontalSpacer_11;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label;
+    QPushButton *pushButtonModifDesc;
+    QStackedWidget *stackedWidget_10;
+    QWidget *stackedWidget_10Page1;
     QGridLayout *gridLayout_11;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_3;
@@ -65,38 +95,32 @@ public:
     QLabel *label_5;
     QLineEdit *lineEditPrix;
     QLabel *label_8;
+    QHBoxLayout *horizontalLayout_12;
+    QSpacerItem *horizontalSpacer_7;
+    QLabel *label_12;
+    QLineEdit *lineEditRef;
     QHBoxLayout *horizontalLayout_4;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
     QVBoxLayout *verticalLayout;
-    QComboBox *comboBox;
+    QComboBox *comboBoxCategorie;
     QComboBox *comboBox_2;
     QComboBox *comboBox_3;
+    QSpacerItem *horizontalSpacer_8;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_2;
     QLabel *label_6;
-    QPushButton *pushButtonModifDesc_2;
+    QPushButton *pushButtonModifInfo;
     QHBoxLayout *horizontalLayout_11;
     QCheckBox *checkBoxSupprimerProduit;
     QPushButton *pushButtonSupprimerProduit;
     QSpacerItem *horizontalSpacer_5;
-    QGroupBox *groupBox_9;
-    QGridLayout *gridLayout_9;
-    QGroupBox *groupBox_8;
-    QGridLayout *gridLayout_8;
-    QTextEdit *textEditResum;
-    QGroupBox *groupBox_2;
-    QGridLayout *gridLayout_2;
-    QTextEdit *textEditDesc;
-    QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label;
-    QPushButton *pushButtonModifDesc;
     QWidget *tab_4;
     QGridLayout *gridLayout_15;
-    QGroupBox *groupBox_11;
+    QStackedWidget *stackedWidget_11;
+    QWidget *stackedWidget_11Page1;
     QGridLayout *gridLayout_13;
     QGroupBox *groupBox_5;
     QGridLayout *gridLayout_6;
@@ -116,7 +140,8 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QLineEdit *lineEditNouvelleCategorie;
     QPushButton *pushButtonNouvelleCategorie;
-    QGroupBox *groupBox_12;
+    QStackedWidget *stackedWidget_12;
+    QWidget *stackedWidget_12Page1;
     QGridLayout *gridLayout_14;
     QGroupBox *groupBox_7;
     QGridLayout *gridLayout_7;
@@ -126,6 +151,7 @@ public:
     QLabel *label_10;
     QPushButton *pushButtonModifDescCategorie;
     QWidget *tab_5;
+    QGridLayout *gridLayout_16;
     QWidget *tab_6;
     QMenuBar *menuBar;
     QMenu *menuFichier;
@@ -135,7 +161,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(752, 641);
+        MainWindow->resize(810, 724);
         actionQuitter = new QAction(MainWindow);
         actionQuitter->setObjectName(QString::fromUtf8("actionQuitter"));
         centralWidget = new QWidget(MainWindow);
@@ -156,14 +182,149 @@ public:
         gridLayout_12->setSpacing(6);
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
         gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
-        groupBox_10 = new QGroupBox(tab_3);
+        stackedWidget_9 = new QStackedWidget(tab_3);
+        stackedWidget_9->setObjectName(QString::fromUtf8("stackedWidget_9"));
+        stackedWidget_9Page1 = new QWidget();
+        stackedWidget_9Page1->setObjectName(QString::fromUtf8("stackedWidget_9Page1"));
+        gridLayout_17 = new QGridLayout(stackedWidget_9Page1);
+        gridLayout_17->setSpacing(6);
+        gridLayout_17->setContentsMargins(11, 11, 11, 11);
+        gridLayout_17->setObjectName(QString::fromUtf8("gridLayout_17"));
+        groupBox_8 = new QGroupBox(stackedWidget_9Page1);
+        groupBox_8->setObjectName(QString::fromUtf8("groupBox_8"));
+        groupBox_8->setMaximumSize(QSize(16777215, 150));
+        gridLayout_2 = new QGridLayout(groupBox_8);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        textEditResum = new QTextEdit(groupBox_8);
+        textEditResum->setObjectName(QString::fromUtf8("textEditResum"));
+
+        gridLayout_2->addWidget(textEditResum, 0, 0, 1, 1);
+
+
+        gridLayout_17->addWidget(groupBox_8, 0, 0, 1, 2);
+
+        groupBox_2 = new QGroupBox(stackedWidget_9Page1);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        gridLayout_9 = new QGridLayout(groupBox_2);
+        gridLayout_9->setSpacing(6);
+        gridLayout_9->setContentsMargins(11, 11, 11, 11);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        textEditDesc = new QTextEdit(groupBox_2);
+        textEditDesc->setObjectName(QString::fromUtf8("textEditDesc"));
+
+        gridLayout_9->addWidget(textEditDesc, 0, 0, 1, 1);
+
+
+        gridLayout_17->addWidget(groupBox_2, 1, 0, 1, 2);
+
+        groupBox_10 = new QGroupBox(stackedWidget_9Page1);
         groupBox_10->setObjectName(QString::fromUtf8("groupBox_10"));
-        groupBox_10->setMaximumSize(QSize(500, 16777215));
-        gridLayout_11 = new QGridLayout(groupBox_10);
+        gridLayout_18 = new QGridLayout(groupBox_10);
+        gridLayout_18->setSpacing(6);
+        gridLayout_18->setContentsMargins(11, 11, 11, 11);
+        gridLayout_18->setObjectName(QString::fromUtf8("gridLayout_18"));
+        dial = new QDial(groupBox_10);
+        dial->setObjectName(QString::fromUtf8("dial"));
+
+        gridLayout_18->addWidget(dial, 0, 0, 1, 1);
+
+
+        gridLayout_17->addWidget(groupBox_10, 2, 0, 1, 1);
+
+        groupBox_9 = new QGroupBox(stackedWidget_9Page1);
+        groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
+        gridLayout_8 = new QGridLayout(groupBox_9);
+        gridLayout_8->setSpacing(6);
+        gridLayout_8->setContentsMargins(11, 11, 11, 11);
+        gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
+        horizontalLayout_15 = new QHBoxLayout();
+        horizontalLayout_15->setSpacing(6);
+        horizontalLayout_15->setObjectName(QString::fromUtf8("horizontalLayout_15"));
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_15->addItem(horizontalSpacer_12);
+
+        label_14 = new QLabel(groupBox_9);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setMinimumSize(QSize(100, 100));
+        label_14->setMaximumSize(QSize(200, 200));
+        label_14->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_15->addWidget(label_14);
+
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_15->addItem(horizontalSpacer_13);
+
+
+        gridLayout_8->addLayout(horizontalLayout_15, 0, 0, 1, 1);
+
+        horizontalLayout_14 = new QHBoxLayout();
+        horizontalLayout_14->setSpacing(6);
+        horizontalLayout_14->setObjectName(QString::fromUtf8("horizontalLayout_14"));
+        label_13 = new QLabel(groupBox_9);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+
+        horizontalLayout_14->addWidget(label_13);
+
+        toolButton = new QToolButton(groupBox_9);
+        toolButton->setObjectName(QString::fromUtf8("toolButton"));
+
+        horizontalLayout_14->addWidget(toolButton);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_14->addItem(horizontalSpacer_11);
+
+
+        gridLayout_8->addLayout(horizontalLayout_14, 1, 0, 1, 1);
+
+
+        gridLayout_17->addWidget(groupBox_9, 2, 1, 1, 1);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
+        label = new QLabel(stackedWidget_9Page1);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout_2->addWidget(label);
+
+        pushButtonModifDesc = new QPushButton(stackedWidget_9Page1);
+        pushButtonModifDesc->setObjectName(QString::fromUtf8("pushButtonModifDesc"));
+        pushButtonModifDesc->setMinimumSize(QSize(24, 24));
+        pushButtonModifDesc->setMaximumSize(QSize(24, 24));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/img/modif+.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButtonModifDesc->setIcon(icon);
+        pushButtonModifDesc->setIconSize(QSize(24, 24));
+        pushButtonModifDesc->setFlat(true);
+
+        horizontalLayout_2->addWidget(pushButtonModifDesc);
+
+
+        gridLayout_17->addLayout(horizontalLayout_2, 3, 0, 1, 2);
+
+        stackedWidget_9->addWidget(stackedWidget_9Page1);
+
+        gridLayout_12->addWidget(stackedWidget_9, 0, 1, 1, 1);
+
+        stackedWidget_10 = new QStackedWidget(tab_3);
+        stackedWidget_10->setObjectName(QString::fromUtf8("stackedWidget_10"));
+        stackedWidget_10->setMaximumSize(QSize(500, 16777215));
+        stackedWidget_10Page1 = new QWidget();
+        stackedWidget_10Page1->setObjectName(QString::fromUtf8("stackedWidget_10Page1"));
+        gridLayout_11 = new QGridLayout(stackedWidget_10Page1);
         gridLayout_11->setSpacing(0);
         gridLayout_11->setContentsMargins(0, 0, 0, 0);
         gridLayout_11->setObjectName(QString::fromUtf8("gridLayout_11"));
-        groupBox = new QGroupBox(groupBox_10);
+        groupBox = new QGroupBox(stackedWidget_10Page1);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         gridLayout_3 = new QGridLayout(groupBox);
         gridLayout_3->setSpacing(6);
@@ -193,7 +354,7 @@ public:
 
         gridLayout_11->addWidget(groupBox, 0, 0, 1, 1);
 
-        groupBox_3 = new QGroupBox(groupBox_10);
+        groupBox_3 = new QGroupBox(stackedWidget_10Page1);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
         gridLayout = new QGridLayout(groupBox_3);
         gridLayout->setSpacing(6);
@@ -208,9 +369,9 @@ public:
         pushButtonAjoutProduit->setObjectName(QString::fromUtf8("pushButtonAjoutProduit"));
         pushButtonAjoutProduit->setMinimumSize(QSize(24, 24));
         pushButtonAjoutProduit->setMaximumSize(QSize(24, 24));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/img/add+.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButtonAjoutProduit->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/img/add+.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButtonAjoutProduit->setIcon(icon1);
         pushButtonAjoutProduit->setFlat(true);
 
         gridLayout->addWidget(pushButtonAjoutProduit, 0, 1, 1, 1);
@@ -218,7 +379,7 @@ public:
 
         gridLayout_11->addWidget(groupBox_3, 2, 0, 1, 1);
 
-        groupBox_4 = new QGroupBox(groupBox_10);
+        groupBox_4 = new QGroupBox(stackedWidget_10Page1);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
         gridLayout_4 = new QGridLayout(groupBox_4);
         gridLayout_4->setSpacing(6);
@@ -259,6 +420,28 @@ public:
 
         gridLayout_4->addLayout(horizontalLayout_7, 0, 0, 1, 1);
 
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setSpacing(6);
+        horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_12->addItem(horizontalSpacer_7);
+
+        label_12 = new QLabel(groupBox_4);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+
+        horizontalLayout_12->addWidget(label_12);
+
+        lineEditRef = new QLineEdit(groupBox_4);
+        lineEditRef->setObjectName(QString::fromUtf8("lineEditRef"));
+        lineEditRef->setMaximumSize(QSize(16777215, 16777215));
+        lineEditRef->setFrame(false);
+
+        horizontalLayout_12->addWidget(lineEditRef);
+
+
+        gridLayout_4->addLayout(horizontalLayout_12, 1, 0, 1, 1);
+
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
@@ -286,32 +469,36 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        comboBox = new QComboBox(groupBox_4);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setMinimumSize(QSize(200, 0));
-        comboBox->setMaximumSize(QSize(200, 16777215));
+        comboBoxCategorie = new QComboBox(groupBox_4);
+        comboBoxCategorie->setObjectName(QString::fromUtf8("comboBoxCategorie"));
+        comboBoxCategorie->setMinimumSize(QSize(200, 0));
+        comboBoxCategorie->setMaximumSize(QSize(10000000, 16777215));
 
-        verticalLayout->addWidget(comboBox);
+        verticalLayout->addWidget(comboBoxCategorie);
 
         comboBox_2 = new QComboBox(groupBox_4);
         comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
         comboBox_2->setMinimumSize(QSize(200, 0));
-        comboBox_2->setMaximumSize(QSize(200, 16777215));
+        comboBox_2->setMaximumSize(QSize(10000000, 16777215));
 
         verticalLayout->addWidget(comboBox_2);
 
         comboBox_3 = new QComboBox(groupBox_4);
         comboBox_3->setObjectName(QString::fromUtf8("comboBox_3"));
         comboBox_3->setMinimumSize(QSize(200, 0));
-        comboBox_3->setMaximumSize(QSize(200, 16777215));
+        comboBox_3->setMaximumSize(QSize(10000000, 16777215));
 
         verticalLayout->addWidget(comboBox_3);
 
 
         horizontalLayout_4->addLayout(verticalLayout);
 
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_4->addLayout(horizontalLayout_4, 1, 0, 1, 1);
+        horizontalLayout_4->addItem(horizontalSpacer_8);
+
+
+        gridLayout_4->addLayout(horizontalLayout_4, 2, 0, 1, 1);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
@@ -325,20 +512,18 @@ public:
 
         horizontalLayout_3->addWidget(label_6);
 
-        pushButtonModifDesc_2 = new QPushButton(groupBox_4);
-        pushButtonModifDesc_2->setObjectName(QString::fromUtf8("pushButtonModifDesc_2"));
-        pushButtonModifDesc_2->setMinimumSize(QSize(24, 24));
-        pushButtonModifDesc_2->setMaximumSize(QSize(24, 24));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/img/modif+.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButtonModifDesc_2->setIcon(icon1);
-        pushButtonModifDesc_2->setIconSize(QSize(24, 24));
-        pushButtonModifDesc_2->setFlat(true);
+        pushButtonModifInfo = new QPushButton(groupBox_4);
+        pushButtonModifInfo->setObjectName(QString::fromUtf8("pushButtonModifInfo"));
+        pushButtonModifInfo->setMinimumSize(QSize(24, 24));
+        pushButtonModifInfo->setMaximumSize(QSize(24, 24));
+        pushButtonModifInfo->setIcon(icon);
+        pushButtonModifInfo->setIconSize(QSize(24, 24));
+        pushButtonModifInfo->setFlat(true);
 
-        horizontalLayout_3->addWidget(pushButtonModifDesc_2);
+        horizontalLayout_3->addWidget(pushButtonModifInfo);
 
 
-        gridLayout_4->addLayout(horizontalLayout_3, 2, 0, 1, 1);
+        gridLayout_4->addLayout(horizontalLayout_3, 3, 0, 1, 1);
 
         horizontalLayout_11 = new QHBoxLayout();
         horizontalLayout_11->setSpacing(6);
@@ -366,76 +551,14 @@ public:
         horizontalLayout_11->addItem(horizontalSpacer_5);
 
 
-        gridLayout_4->addLayout(horizontalLayout_11, 3, 0, 1, 1);
+        gridLayout_4->addLayout(horizontalLayout_11, 4, 0, 1, 1);
 
 
         gridLayout_11->addWidget(groupBox_4, 1, 0, 1, 1);
 
+        stackedWidget_10->addWidget(stackedWidget_10Page1);
 
-        gridLayout_12->addWidget(groupBox_10, 0, 0, 1, 1);
-
-        groupBox_9 = new QGroupBox(tab_3);
-        groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
-        gridLayout_9 = new QGridLayout(groupBox_9);
-        gridLayout_9->setSpacing(0);
-        gridLayout_9->setContentsMargins(0, 0, 0, 0);
-        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
-        groupBox_8 = new QGroupBox(groupBox_9);
-        groupBox_8->setObjectName(QString::fromUtf8("groupBox_8"));
-        groupBox_8->setMaximumSize(QSize(16777215, 150));
-        gridLayout_8 = new QGridLayout(groupBox_8);
-        gridLayout_8->setSpacing(6);
-        gridLayout_8->setContentsMargins(11, 11, 11, 11);
-        gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
-        textEditResum = new QTextEdit(groupBox_8);
-        textEditResum->setObjectName(QString::fromUtf8("textEditResum"));
-
-        gridLayout_8->addWidget(textEditResum, 0, 0, 1, 1);
-
-
-        gridLayout_9->addWidget(groupBox_8, 0, 0, 1, 1);
-
-        groupBox_2 = new QGroupBox(groupBox_9);
-        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        gridLayout_2 = new QGridLayout(groupBox_2);
-        gridLayout_2->setSpacing(6);
-        gridLayout_2->setContentsMargins(11, 11, 11, 11);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        textEditDesc = new QTextEdit(groupBox_2);
-        textEditDesc->setObjectName(QString::fromUtf8("textEditDesc"));
-
-        gridLayout_2->addWidget(textEditDesc, 0, 0, 1, 1);
-
-
-        gridLayout_9->addWidget(groupBox_2, 1, 0, 1, 1);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer);
-
-        label = new QLabel(groupBox_9);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        horizontalLayout_2->addWidget(label);
-
-        pushButtonModifDesc = new QPushButton(groupBox_9);
-        pushButtonModifDesc->setObjectName(QString::fromUtf8("pushButtonModifDesc"));
-        pushButtonModifDesc->setMinimumSize(QSize(24, 24));
-        pushButtonModifDesc->setMaximumSize(QSize(24, 24));
-        pushButtonModifDesc->setIcon(icon1);
-        pushButtonModifDesc->setIconSize(QSize(24, 24));
-        pushButtonModifDesc->setFlat(true);
-
-        horizontalLayout_2->addWidget(pushButtonModifDesc);
-
-
-        gridLayout_9->addLayout(horizontalLayout_2, 2, 0, 1, 1);
-
-
-        gridLayout_12->addWidget(groupBox_9, 0, 1, 1, 1);
+        gridLayout_12->addWidget(stackedWidget_10, 0, 0, 1, 1);
 
         tabWidgetFonctionnalites->addTab(tab_3, QString());
         tab_4 = new QWidget();
@@ -444,14 +567,16 @@ public:
         gridLayout_15->setSpacing(6);
         gridLayout_15->setContentsMargins(11, 11, 11, 11);
         gridLayout_15->setObjectName(QString::fromUtf8("gridLayout_15"));
-        groupBox_11 = new QGroupBox(tab_4);
-        groupBox_11->setObjectName(QString::fromUtf8("groupBox_11"));
-        groupBox_11->setMaximumSize(QSize(500, 16777215));
-        gridLayout_13 = new QGridLayout(groupBox_11);
+        stackedWidget_11 = new QStackedWidget(tab_4);
+        stackedWidget_11->setObjectName(QString::fromUtf8("stackedWidget_11"));
+        stackedWidget_11->setMaximumSize(QSize(500, 16777215));
+        stackedWidget_11Page1 = new QWidget();
+        stackedWidget_11Page1->setObjectName(QString::fromUtf8("stackedWidget_11Page1"));
+        gridLayout_13 = new QGridLayout(stackedWidget_11Page1);
         gridLayout_13->setSpacing(0);
         gridLayout_13->setContentsMargins(0, 0, 0, 0);
         gridLayout_13->setObjectName(QString::fromUtf8("gridLayout_13"));
-        groupBox_5 = new QGroupBox(groupBox_11);
+        groupBox_5 = new QGroupBox(stackedWidget_11Page1);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
         gridLayout_6 = new QGridLayout(groupBox_5);
         gridLayout_6->setSpacing(6);
@@ -506,6 +631,7 @@ public:
 
         pushButtonSupprimerCategorie = new QPushButton(groupBox_5);
         pushButtonSupprimerCategorie->setObjectName(QString::fromUtf8("pushButtonSupprimerCategorie"));
+        pushButtonSupprimerCategorie->setEnabled(false);
         pushButtonSupprimerCategorie->setMinimumSize(QSize(24, 24));
         pushButtonSupprimerCategorie->setMaximumSize(QSize(24, 24));
         pushButtonSupprimerCategorie->setIcon(icon2);
@@ -523,7 +649,7 @@ public:
 
         gridLayout_13->addWidget(groupBox_5, 0, 0, 1, 1);
 
-        groupBox_6 = new QGroupBox(groupBox_11);
+        groupBox_6 = new QGroupBox(stackedWidget_11Page1);
         groupBox_6->setObjectName(QString::fromUtf8("groupBox_6"));
         gridLayout_5 = new QGridLayout(groupBox_6);
         gridLayout_5->setSpacing(6);
@@ -541,7 +667,7 @@ public:
         pushButtonNouvelleCategorie->setObjectName(QString::fromUtf8("pushButtonNouvelleCategorie"));
         pushButtonNouvelleCategorie->setMinimumSize(QSize(24, 24));
         pushButtonNouvelleCategorie->setMaximumSize(QSize(24, 24));
-        pushButtonNouvelleCategorie->setIcon(icon);
+        pushButtonNouvelleCategorie->setIcon(icon1);
         pushButtonNouvelleCategorie->setFlat(true);
 
         horizontalLayout_5->addWidget(pushButtonNouvelleCategorie);
@@ -552,18 +678,19 @@ public:
 
         gridLayout_13->addWidget(groupBox_6, 1, 0, 1, 1);
 
+        stackedWidget_11->addWidget(stackedWidget_11Page1);
 
-        gridLayout_15->addWidget(groupBox_11, 0, 0, 1, 1);
+        gridLayout_15->addWidget(stackedWidget_11, 0, 0, 1, 1);
 
-        groupBox_12 = new QGroupBox(tab_4);
-        groupBox_12->setObjectName(QString::fromUtf8("groupBox_12"));
-        groupBox_12->setFlat(false);
-        groupBox_12->setCheckable(false);
-        gridLayout_14 = new QGridLayout(groupBox_12);
+        stackedWidget_12 = new QStackedWidget(tab_4);
+        stackedWidget_12->setObjectName(QString::fromUtf8("stackedWidget_12"));
+        stackedWidget_12Page1 = new QWidget();
+        stackedWidget_12Page1->setObjectName(QString::fromUtf8("stackedWidget_12Page1"));
+        gridLayout_14 = new QGridLayout(stackedWidget_12Page1);
         gridLayout_14->setSpacing(0);
         gridLayout_14->setContentsMargins(0, 0, 0, 0);
         gridLayout_14->setObjectName(QString::fromUtf8("gridLayout_14"));
-        groupBox_7 = new QGroupBox(groupBox_12);
+        groupBox_7 = new QGroupBox(stackedWidget_12Page1);
         groupBox_7->setObjectName(QString::fromUtf8("groupBox_7"));
         gridLayout_7 = new QGridLayout(groupBox_7);
         gridLayout_7->setSpacing(6);
@@ -590,7 +717,7 @@ public:
         pushButtonModifDescCategorie->setObjectName(QString::fromUtf8("pushButtonModifDescCategorie"));
         pushButtonModifDescCategorie->setMinimumSize(QSize(24, 24));
         pushButtonModifDescCategorie->setMaximumSize(QSize(24, 24));
-        pushButtonModifDescCategorie->setIcon(icon1);
+        pushButtonModifDescCategorie->setIcon(icon);
         pushButtonModifDescCategorie->setIconSize(QSize(24, 24));
         pushButtonModifDescCategorie->setFlat(true);
 
@@ -602,12 +729,17 @@ public:
 
         gridLayout_14->addWidget(groupBox_7, 0, 0, 1, 1);
 
+        stackedWidget_12->addWidget(stackedWidget_12Page1);
 
-        gridLayout_15->addWidget(groupBox_12, 0, 1, 2, 1);
+        gridLayout_15->addWidget(stackedWidget_12, 0, 1, 2, 1);
 
         tabWidgetFonctionnalites->addTab(tab_4, QString());
         tab_5 = new QWidget();
         tab_5->setObjectName(QString::fromUtf8("tab_5"));
+        gridLayout_16 = new QGridLayout(tab_5);
+        gridLayout_16->setSpacing(6);
+        gridLayout_16->setContentsMargins(11, 11, 11, 11);
+        gridLayout_16->setObjectName(QString::fromUtf8("gridLayout_16"));
         tabWidgetFonctionnalites->addTab(tab_5, QString());
         tab_6 = new QWidget();
         tab_6->setObjectName(QString::fromUtf8("tab_6"));
@@ -618,7 +750,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 752, 25));
+        menuBar->setGeometry(QRect(0, 0, 810, 25));
         menuFichier = new QMenu(menuBar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         MainWindow->setMenuBar(menuBar);
@@ -641,7 +773,15 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Gestion Site web SAE", 0, QApplication::UnicodeUTF8));
         actionQuitter->setText(QApplication::translate("MainWindow", "Quitter", 0, QApplication::UnicodeUTF8));
-        groupBox_10->setTitle(QString());
+        groupBox_8->setTitle(QApplication::translate("MainWindow", "R\303\251sum\303\251 :", 0, QApplication::UnicodeUTF8));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "Description :", 0, QApplication::UnicodeUTF8));
+        groupBox_10->setTitle(QApplication::translate("MainWindow", "Outils :", 0, QApplication::UnicodeUTF8));
+        groupBox_9->setTitle(QApplication::translate("MainWindow", "Image :", 0, QApplication::UnicodeUTF8));
+        label_14->setText(QApplication::translate("MainWindow", "aper\303\247u", 0, QApplication::UnicodeUTF8));
+        label_13->setText(QApplication::translate("MainWindow", "Chemin :", 0, QApplication::UnicodeUTF8));
+        toolButton->setText(QApplication::translate("MainWindow", "...", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("MainWindow", "Valider les modifications :", 0, QApplication::UnicodeUTF8));
+        pushButtonModifDesc->setText(QString());
         groupBox->setTitle(QApplication::translate("MainWindow", "Produits :", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("MainWindow", "recherche :", 0, QApplication::UnicodeUTF8));
         groupBox_3->setTitle(QApplication::translate("MainWindow", "Nouveau produit :", 0, QApplication::UnicodeUTF8));
@@ -649,20 +789,15 @@ public:
         groupBox_4->setTitle(QApplication::translate("MainWindow", "Informations :", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("MainWindow", "Prix :", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("MainWindow", "\342\202\254 ", 0, QApplication::UnicodeUTF8));
+        label_12->setText(QApplication::translate("MainWindow", "Ref :", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("MainWindow", "Cat\303\251gorie :", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("MainWindow", "Fournisseur :", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("MainWindow", "Fabricant :", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("MainWindow", "Valider les modifications :", 0, QApplication::UnicodeUTF8));
-        pushButtonModifDesc_2->setText(QString());
+        pushButtonModifInfo->setText(QString());
         checkBoxSupprimerProduit->setText(QApplication::translate("MainWindow", "Supprimer ce produit :", 0, QApplication::UnicodeUTF8));
         pushButtonSupprimerProduit->setText(QString());
-        groupBox_9->setTitle(QString());
-        groupBox_8->setTitle(QApplication::translate("MainWindow", "R\303\251sum\303\251 :", 0, QApplication::UnicodeUTF8));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "Description :", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("MainWindow", "Valider les modifications :", 0, QApplication::UnicodeUTF8));
-        pushButtonModifDesc->setText(QString());
         tabWidgetFonctionnalites->setTabText(tabWidgetFonctionnalites->indexOf(tab_3), QApplication::translate("MainWindow", "Produits", 0, QApplication::UnicodeUTF8));
-        groupBox_11->setTitle(QString());
         groupBox_5->setTitle(QApplication::translate("MainWindow", "Gestion des cat\303\251gories :", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("MainWindow", "recherche :", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("MainWindow", "D\303\251signation :", 0, QApplication::UnicodeUTF8));
@@ -670,7 +805,6 @@ public:
         pushButtonSupprimerCategorie->setText(QString());
         groupBox_6->setTitle(QApplication::translate("MainWindow", "Nouvelle cat\303\251gorie :", 0, QApplication::UnicodeUTF8));
         pushButtonNouvelleCategorie->setText(QString());
-        groupBox_12->setTitle(QString());
         groupBox_7->setTitle(QApplication::translate("MainWindow", "Description :", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("MainWindow", "Valider les modifications :", 0, QApplication::UnicodeUTF8));
         pushButtonModifDescCategorie->setText(QString());

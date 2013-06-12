@@ -29,6 +29,10 @@ private:
 
 private slots:
 
+
+
+    void on_pushButtonModifDesc_clicked();
+    void on_pushButtonModifInfo_clicked();
     void on_pushButtonAjoutProduit_clicked();
     void on_pushButtonSupprimerProduit_clicked();
     void on_checkBoxSupprimerProduit_clicked();
@@ -41,12 +45,24 @@ private slots:
     void affichageResume();
     void affichageNom();
     void decocherSuppressionProduit();
+    void affichageRef();
+    void nouveauProduit();
+    void actualiserProduit();
+    void afficheCategorie();
+    void selectionAutoProduit();
 
+
+    void on_checkBoxSupprimerCategorie_clicked();
+    void on_pushButtonNouvelleCategorie_clicked();
     void on_lineEditRechercheCategorie_textEdited(QString );
     void on_listViewCategorie_clicked(QModelIndex index);
     void actualiserAffichageCategorie();
     void affichageDescriptionCategorie();
     void affichageNomCategorie();
+    void nouvelleCategorie();
+    void actualiserCategorie();
+    void decocherSuppressionCategorie();
+    void on_pushButtonSupprimerCategorie_clicked();
 
 };
 

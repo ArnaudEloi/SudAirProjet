@@ -5,5 +5,7 @@
         <file>del+.png</file>
         <file>modif+.png</file>
         <file>panier+.png</file>
+        <file>logo-sae.png</file>
+        <file>sae-icon.png</file>
     </qresource>
 </RCC>

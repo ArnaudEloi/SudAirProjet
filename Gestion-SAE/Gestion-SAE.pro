@@ -5,7 +5,10 @@ QT += sql
 TARGET = Gestion-SAE
 TEMPLATE = app
 SOURCES += main.cpp \
-    mainwindow.cpp
-HEADERS += mainwindow.h
-FORMS += mainwindow.ui
+    mainwindow.cpp \
+    about.cpp
+HEADERS += mainwindow.h \
+    about.h
+FORMS += mainwindow.ui \
+    about.ui
 RESOURCES += Ressources.qrc
